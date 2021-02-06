@@ -7,12 +7,8 @@ public class ActorComparatorByFee implements Comparator<Actor> {
     public int compare(Actor first, Actor second) {
         if (first == second) {
             return 0;
-        } else if (first.getFee() > second.getFee()) {
-            return 1;
-        } else if (first.getFee() < second.getFee()) {
-            return -1;
         } else {
-            return 0;
+            return Integer.compare(first.getFee(), second.getFee());
         }
     }
 }

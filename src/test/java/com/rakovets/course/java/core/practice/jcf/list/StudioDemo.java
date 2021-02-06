@@ -1,4 +1,6 @@
-package com.rakovets.course.java.core.practice.jcf.list.studio;
+package com.rakovets.course.java.core.practice.jcf.list;
+
+import com.rakovets.course.java.core.practice.jcf.list.studio.*;
 
 import java.util.*;
 
@@ -31,11 +33,11 @@ public class StudioDemo {
         System.out.println("Actor list sorted by fee: ");
         colambia.printActorList();
 
-        studioList.sort(new ActorComparatorBySurnameAndAge());
+        studioList.sort(new ActorComparatorBySurname().thenComparing(new ActorComparatorByAge()));
         System.out.println("Actor list sorted by surname and age: ");
         colambia.printActorList();
 
-        studioList.sort(new ActorComparatorByFeeAndSurname());
+        studioList.sort(new ActorComparatorByFee().thenComparing(new ActorComparatorBySurname()));
         System.out.println("Actor list sorted by fee and surname: ");
         colambia.printActorList();
     }
