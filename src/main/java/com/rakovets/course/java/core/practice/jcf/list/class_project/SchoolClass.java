@@ -24,7 +24,6 @@ public class SchoolClass {
         for (Student a : this.getStudents()) {
             System.out.println(a);
         }
-        System.out.print("\n");
     }
 
     public List<Student> getStudents() {
